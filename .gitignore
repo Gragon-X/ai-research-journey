@@ -1,1 +1,5 @@
-
+data/           # 数据集不上传
+*.csv
+__pycache__/    # Python 缓存
+*.pyc
+.env            # API密钥
