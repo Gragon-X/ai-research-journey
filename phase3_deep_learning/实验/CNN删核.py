@@ -52,10 +52,10 @@ def test(model):
     return 100 * correct / total
 transform = transforms.ToTensor()
 train_data = datasets.FashionMNIST(
-    root='C:/Users/Gragon-X/Desktop/AI Research/04_深度学习/神经网络/CNN/data',
+    root='xxx',
     train=True, download=True, transform=transform)
 test_data = datasets.FashionMNIST(
-    root='C:/Users/Gragon-X/Desktop/AI Research/04_深度学习/神经网络/CNN/data',
+    root='xxx',
     train=False, download=True, transform=transform)
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
@@ -70,8 +70,6 @@ print(f"核5 bias: {model.conv1.bias[5].item():.4f}")
 with torch.no_grad():
     model.conv1.weight[5] = 0
     model.conv1.bias[5] = 0
-
-# ③ 再测精度 + 激活比例（预期：比例 0.0000，精度可能再掉一点）
 
 # ④ 手术后
 print(f"手术后精度: {test(model):.2f}%")
