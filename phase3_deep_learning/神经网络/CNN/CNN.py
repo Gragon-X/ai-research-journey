@@ -11,10 +11,10 @@ plt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei']
 #======加载数据=====
 transform = transforms.ToTensor()
 train_data = datasets.FashionMNIST(
-    root='C:/Users/Gragon-X/Desktop/AI Research/04_深度学习/神经网络/CNN/data',
+    root='xxx',
     train=True, download=True, transform=transform)
 test_data = datasets.FashionMNIST(
-    root='C:/Users/Gragon-X/Desktop/AI Research/04_深度学习/神经网络/CNN/data',
+    root='xxx',
     train=False, download=True, transform=transform)
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
